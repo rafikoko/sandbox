@@ -40,8 +40,9 @@ public class runMicro
     public static void main(String[] args) throws     
     BootstrapException  {
 
+        //bootstrap first instance
         PayaraMicro micro = PayaraMicro.getInstance();
-        micro.addDeployment("target/restdev.war").setHttpPort(8082)
+        micro.addDeployment("target/restdev.war").setHttpPort(8080)
         	.bootStrap();   
         
         StringBuffer info = new StringBuffer();
